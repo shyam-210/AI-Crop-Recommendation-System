@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Recommendation Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #ffffff, #b6f5a8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+            background-color: #f5fff0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 60%;
+        }
+        h1 {
+            color: #3a3a3a;
+            margin-bottom: 20px;
+        }
+        .result {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        .result div {
+            background-color: #d4f3d4;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            width: 30%;
+            margin: 10px;
+        }
+        .result div h3 {
+            margin: 0;
+            font-size: 16px;
+            color: #333;
+        }
+        .result div p {
+            font-size: 14px;
+            margin: 5px 0 0;
+            color: #555;
+        }
+        .crop-result {
+            font-size: 18px;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AI Crop Recommendation System</h1>
+        <div class="result">
+            <div>
+                <h3>Nitrogen (PPM):</h3>
+                <p>{{ nitrogen }}</p>
+            </div>
+            <div>
+                <h3>Phosphorous (PPM):</h3>
+                <p>{{ phosphorous }}</p>
+            </div>
+            <div>
+                <h3>Potassium (PPM):</h3>
+                <p>{{ potassium }}</p>
+            </div>
+            <div>
+                <h3>Temperature (°C):</h3>
+                <p>{{ temperature }}</p>
+            </div>
+            <div>
+                <h3>Humidity (%):</h3>
+                <p>{{ humidity }}</p>
+            </div>
+            <div>
+                <h3>pH Value:</h3>
+                <p>{{ ph }}</p>
+            </div>
+            <div>
+                <h3>Rainfall (mm):</h3>
+                <p>{{ rainfall }}</p>
+            </div>
+        </div>
+        <h2>The Recommended Crop is:</h2>
+        <p class="crop-result">{{ crop }}</p>
+    </div>
+</body>
+</html>
